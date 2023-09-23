@@ -1,10 +1,16 @@
 
+
 import './App.css';
+import { TicTacToe } from './TicTacToe'
 
 function App() {
+
+
   return (
     <div className="App">
-      <h1>Tic Tac Toe GAME</h1>
+      <header className="App-header">
+        <TicTacToe />
+      </header>
     </div>
   );
 }
