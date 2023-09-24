@@ -59,6 +59,16 @@ export const TicTacToe = () => {
         if (xPlays.length >= 3 || oPlays.length >= 3) getWinner(xPlays, oPlays);
     }
 
+    const reset = () => {
+        setSquares((new Array(9).fill('')))
+        setXPlayer('')
+        setOPlayer('')
+        setPlays(0)
+        setPicked([])
+        setWinner(null)
+        setWinnerSet('')
+    }
+
     return (
         <>
             <h1>Tic Tac Toe</h1>
@@ -74,6 +84,7 @@ export const TicTacToe = () => {
                 )}
             </div>
             {plays === 9 && !winner && <p className='tied-result'>TIE</p>}
+            {(plays === 9 || winner) && <button className='new-game' onClick={reset}>New Game</button>}
         </>
     )
 }
