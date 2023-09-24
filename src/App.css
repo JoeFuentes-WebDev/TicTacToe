@@ -20,15 +20,27 @@
 }
 
 button {
+  background-color: #282c34;
+  border: 2px solid white;
   border-radius: 0;
   width: 100px; 
   height: 100px;
   max-width: 100px; 
   max-height: 100px;
-  font-size: 50px;
+  font-size: 35px;
   font-stretch: 120%;
   color: yellow;
 }
+
+button:nth-child(1) { border-top: none;  border-left: none; }
+button:nth-child(2) {border-top: none;}
+button:nth-child(3) { border-top: none; border-right: none; }
+button:nth-child(4) { border-left: none}
+button:nth-child(6) { border-right: none}
+button:nth-child(7) { border-bottom: none; border-left: none}
+button:nth-child(8) { border-bottom: none}
+button:nth-child(9) { border-bottom: none; border-right: none}
+
 .game-over, .tied {
   font-size: 10px;
 }
@@ -40,7 +52,7 @@ button {
 }
 
 .winner {
-  font-size: 105px;
+  font-size: 50px;
   color: lime;
   line-height: 75px;
 }
@@ -55,12 +67,13 @@ button {
 }
 
 button.new-game {
+  background: green;
   margin-top: 20px;
   max-width: 300px;
   width: 300px;
   font-size: 20px;
   height: 40px; 
   border: none;
-  color: black;
+  color: white;
   font-stretch: normal;
 }
