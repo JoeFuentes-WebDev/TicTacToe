@@ -13,6 +13,8 @@
   color: white;
 }
 .game {
+  width: 300px;
+  max-width: 300px;
   display: grid;
   grid-template-columns: repeat(3, 100px);
 }
