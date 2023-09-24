@@ -31,16 +31,16 @@ button {
   font-size: 10px;
 }
 
-.winner {
-  font-size: 105px;
-  color: lime;
-  line-height: 75px;
-}
-
 
 .tied {
   background-color: lightblue;
   color: black;
+}
+
+.winner {
+  font-size: 105px;
+  color: lime;
+  line-height: 75px;
 }
 
 .tied-result {

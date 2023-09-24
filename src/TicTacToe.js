@@ -67,13 +67,13 @@ export const TicTacToe = () => {
                     (square, i) =>
                         <button
                             disabled={picked.includes(i.toString()) || winner}
-                            className={[winnerSet.includes(i) && 'winner', plays === 9 && 'tied', winner && 'game-over'].join(' ')}
+                            className={[winnerSet.includes(i) && 'winner', plays === 9 && !winner && 'tied', winner && 'game-over'].join(' ')}
                             key={i} id={i} onClick={handleClick}>
                             {square}
                         </button>
                 )}
             </div>
-            {plays === 9 && <p className='tied-result'>TIE</p>}
+            {plays === 9 && !winner && <p className='tied-result'>TIE</p>}
         </>
     )
 }
