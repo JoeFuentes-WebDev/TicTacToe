@@ -77,7 +77,7 @@ export const TicTacToe = () => {
                     (square, i) =>
                         <button
                             disabled={picked.includes(i.toString()) || winner}
-                            className={[winnerSet.includes(i) ? 'winner' : '', (plays === 9 && !winner) ? 'tied' : '', winner ? 'game-over' : ''].join(' ')}
+                            className={[(plays === 9 && !winner) ? 'tied' : '', winnerSet.includes(i) ? 'winner' : '', winner ? 'game-over' : ''].join(' ')}
                             key={i} id={i} onClick={handleClick}>
                             {square}
                         </button>
