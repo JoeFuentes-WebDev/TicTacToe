@@ -15,7 +15,7 @@ export const TicTacToe = () => {
         let theWinner;
         let set = 0;
         let xwins = 0, owins = 0;
-        while (!theWinner && set < winningSets.length - 1) {
+        while (!theWinner && set <= winningSets.length - 1) {
             const winSet = winningSets[set];
 
             for (let w of x) xwins = winSet.includes(w) ? xwins + 1 : xwins;
@@ -83,6 +83,7 @@ export const TicTacToe = () => {
                         </button>
                 )}
             </div>
+            <p>{plays < 9 && (plays % 2 === 0) ? 'X' : 'O'}'s turn</p>
             {plays === 9 && !winner && <p className='tied-result'>TIE</p>}
             {(plays === 9 || winner) && <button className='new-game' onClick={reset}>New Game</button>}
         </>
